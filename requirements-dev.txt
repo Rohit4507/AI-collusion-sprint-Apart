@@ -1,0 +1,2 @@
+# Developer-only lint/format checks; not needed for runtime analysis.
+ruff==0.17.2

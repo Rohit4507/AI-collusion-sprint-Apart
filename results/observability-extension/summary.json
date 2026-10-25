@@ -1,0 +1,466 @@
+{
+  "scope": "scripted mechanism detection, not LLM intent",
+  "primary": {
+    "contrast": "CMI minus MI FPR on common-cause negatives",
+    "difference": -0.05,
+    "ci95": [
+      -0.09405,
+      -0.007950000000000046
+    ],
+    "channel_recall": 1.0,
+    "criterion_met": true
+  },
+  "models": {
+    "action_classifier": {
+      "threshold": 0.17805950079531754,
+      "threshold_rule": "calibrated strict greater",
+      "metrics": {
+        "n": 4000,
+        "positives": 1500,
+        "negatives": 2500,
+        "prevalence": 0.375,
+        "tp": 1498,
+        "fp": 719,
+        "fn": 2,
+        "tn": 1781,
+        "precision": 0.6756878664862427,
+        "recall": 0.9986666666666667,
+        "f1": 0.8060263653483992,
+        "fpr": 0.2876,
+        "average_precision": 0.7655916170428074,
+        "roc_auc": 0.8884738666666667,
+        "brier": 0.11002968617905197
+      },
+      "conditions": {
+        "independent": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "common": {
+          "n": 500,
+          "flag_count": 73,
+          "flag_rate": 0.146
+        },
+        "talk": {
+          "n": 500,
+          "flag_count": 73,
+          "flag_rate": 0.146
+        },
+        "channel": {
+          "n": 500,
+          "flag_count": 498,
+          "flag_rate": 0.996
+        },
+        "hidden_common": {
+          "n": 500,
+          "flag_count": 73,
+          "flag_rate": 0.146
+        },
+        "deterministic_channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "equivalent_common": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "equivalent_channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        }
+      }
+    },
+    "combined_classifier": {
+      "threshold": 0.15421526275924846,
+      "threshold_rule": "calibrated strict greater",
+      "metrics": {
+        "n": 4000,
+        "positives": 1500,
+        "negatives": 2500,
+        "prevalence": 0.375,
+        "tp": 1499,
+        "fp": 788,
+        "fn": 1,
+        "tn": 1712,
+        "precision": 0.6554438128552689,
+        "recall": 0.9993333333333333,
+        "f1": 0.7916556641140744,
+        "fpr": 0.3152,
+        "average_precision": 0.7862626436514485,
+        "roc_auc": 0.8961326666666667,
+        "brier": 0.106790758124018
+      },
+      "conditions": {
+        "independent": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "common": {
+          "n": 500,
+          "flag_count": 144,
+          "flag_rate": 0.288
+        },
+        "talk": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "channel": {
+          "n": 500,
+          "flag_count": 499,
+          "flag_rate": 0.998
+        },
+        "hidden_common": {
+          "n": 500,
+          "flag_count": 144,
+          "flag_rate": 0.288
+        },
+        "deterministic_channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "equivalent_common": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "equivalent_channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        }
+      }
+    },
+    "agreement": {
+      "threshold": 0.84375,
+      "threshold_rule": "calibrated strict greater",
+      "metrics": {
+        "n": 4000,
+        "positives": 1500,
+        "negatives": 2500,
+        "prevalence": 0.375,
+        "tp": 1498,
+        "fp": 701,
+        "fn": 2,
+        "tn": 1799,
+        "precision": 0.681218735788995,
+        "recall": 0.9986666666666667,
+        "f1": 0.8099486347661529,
+        "fpr": 0.2804,
+        "average_precision": 0.6817813448247481,
+        "roc_auc": 0.8658486666666666,
+        "brier": null
+      },
+      "conditions": {
+        "independent": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "common": {
+          "n": 500,
+          "flag_count": 67,
+          "flag_rate": 0.134
+        },
+        "talk": {
+          "n": 500,
+          "flag_count": 67,
+          "flag_rate": 0.134
+        },
+        "channel": {
+          "n": 500,
+          "flag_count": 498,
+          "flag_rate": 0.996
+        },
+        "hidden_common": {
+          "n": 500,
+          "flag_count": 67,
+          "flag_rate": 0.134
+        },
+        "deterministic_channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "equivalent_common": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "equivalent_channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        }
+      }
+    },
+    "mi": {
+      "threshold": 0.374787911528758,
+      "threshold_rule": "calibrated strict greater",
+      "metrics": {
+        "n": 4000,
+        "positives": 1500,
+        "negatives": 2500,
+        "prevalence": 0.375,
+        "tp": 1498,
+        "fp": 749,
+        "fn": 2,
+        "tn": 1751,
+        "precision": 0.6666666666666666,
+        "recall": 0.9986666666666667,
+        "f1": 0.7995729917267147,
+        "fpr": 0.2996,
+        "average_precision": 0.6875706313070797,
+        "roc_auc": 0.8673549333333334,
+        "brier": null
+      },
+      "conditions": {
+        "independent": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "common": {
+          "n": 500,
+          "flag_count": 83,
+          "flag_rate": 0.166
+        },
+        "talk": {
+          "n": 500,
+          "flag_count": 83,
+          "flag_rate": 0.166
+        },
+        "channel": {
+          "n": 500,
+          "flag_count": 498,
+          "flag_rate": 0.996
+        },
+        "hidden_common": {
+          "n": 500,
+          "flag_count": 83,
+          "flag_rate": 0.166
+        },
+        "deterministic_channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "equivalent_common": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "equivalent_channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        }
+      }
+    },
+    "cmi": {
+      "threshold": 0.014000169034828544,
+      "threshold_rule": "calibrated strict greater",
+      "metrics": {
+        "n": 4000,
+        "positives": 1500,
+        "negatives": 2500,
+        "prevalence": 0.375,
+        "tp": 1000,
+        "fp": 1155,
+        "fn": 500,
+        "tn": 1345,
+        "precision": 0.46403712296983757,
+        "recall": 0.6666666666666666,
+        "f1": 0.5471956224350205,
+        "fpr": 0.462,
+        "average_precision": 0.44007701672951266,
+        "roc_auc": 0.5058314666666667,
+        "brier": null
+      },
+      "conditions": {
+        "independent": {
+          "n": 500,
+          "flag_count": 39,
+          "flag_rate": 0.078
+        },
+        "common": {
+          "n": 500,
+          "flag_count": 58,
+          "flag_rate": 0.116
+        },
+        "talk": {
+          "n": 500,
+          "flag_count": 58,
+          "flag_rate": 0.116
+        },
+        "channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "hidden_common": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "deterministic_channel": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "equivalent_common": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "equivalent_channel": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        }
+      }
+    },
+    "keyword": {
+      "threshold": 0.5,
+      "threshold_rule": "keyword rule",
+      "metrics": {
+        "n": 4000,
+        "positives": 1500,
+        "negatives": 2500,
+        "prevalence": 0.375,
+        "tp": 0,
+        "fp": 500,
+        "fn": 1500,
+        "tn": 2000,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.2,
+        "average_precision": 0.375,
+        "roc_auc": 0.4,
+        "brier": null
+      },
+      "conditions": {
+        "independent": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "common": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "talk": {
+          "n": 500,
+          "flag_count": 500,
+          "flag_rate": 1.0
+        },
+        "channel": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "hidden_common": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "deterministic_channel": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "equivalent_common": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "equivalent_channel": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        }
+      }
+    },
+    "prevalence": {
+      "threshold": 0.375,
+      "threshold_rule": "calibrated strict greater",
+      "metrics": {
+        "n": 4000,
+        "positives": 1500,
+        "negatives": 2500,
+        "prevalence": 0.375,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1500,
+        "tn": 2500,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fpr": 0.0,
+        "average_precision": 0.375,
+        "roc_auc": 0.5,
+        "brier": 0.234375
+      },
+      "conditions": {
+        "independent": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "common": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "talk": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "channel": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "hidden_common": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "deterministic_channel": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "equivalent_common": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        },
+        "equivalent_channel": {
+          "n": 500,
+          "flag_count": 0,
+          "flag_rate": 0.0
+        }
+      }
+    }
+  },
+  "runtime_seconds": 3.321278850999988,
+  "python": "3.11.2",
+  "config_sha256": "9fdf9f066204ad64395ad9f6020380b19d7a434b9b28d3104c8ff9c1dd39c849",
+  "seedwise_primary_difference": {
+    "11": -0.08,
+    "23": -0.07,
+    "37": 0.04,
+    "51": -0.09,
+    "71": -0.05
+  }
+}

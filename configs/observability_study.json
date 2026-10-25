@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "freeze_date": "2026-10-25",
+  "seeds": [11, 23, 37, 51, 71],
+  "blocks_per_split": 100,
+  "steps": 256,
+  "bootstrap_replicates": 1000,
+  "target_calibration_fpr": 0.1,
+  "families": {"development": 0.1, "held_out": 0.25}
+}
