@@ -55,3 +55,4 @@ The new scripted study was designed/implemented/run on October 25, 2026 with ext
 ## Scope and gaps
 
 No real-LLM validation, unseen environment-family test, prevalence sweep, realistic text monitor, full benchmark-native detector comparison, or deployment-FPR guarantee. A fresh virtual-environment reproduction passed; no clean-container reproduction was performed. See the report for dual-use and false-accusation risks. Root original-work licensing has not been assigned; upstream licensed code retains its notices. Do not assume a blanket reuse license.
+"# AI-collusion-sprint-Apart" 
