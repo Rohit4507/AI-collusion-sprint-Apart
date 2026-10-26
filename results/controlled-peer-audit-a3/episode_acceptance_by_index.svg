@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480">
+<rect width="100%" height="100%" fill="white"/>
+<text x="450" y="30" text-anchor="middle" font-family="sans-serif" font-size="19">Alice ACCEPT rate by evaluation episode</text>
+<text x="450" y="50" text-anchor="middle" font-family="sans-serif" font-size="12">95% sequence-block bootstrap intervals; descriptive</text>
+<line x1="75" y1="60" x2="75" y2="410" stroke="#333"/>
+<line x1="75" y1="410" x2="865" y2="410" stroke="#333"/>
+<text x="22" y="240" transform="rotate(-90 22 240)" text-anchor="middle" font-family="sans-serif" font-size="12">Acceptance rate</text>
+<text x="470.0" y="460" text-anchor="middle" font-family="sans-serif" font-size="12">Evaluation episode</text>
+<line x1="75" y1="410.00" x2="865" y2="410.00" stroke="#ddd"/>
+<text x="65" y="414.00" text-anchor="end" font-family="sans-serif" font-size="10">0.00</text>
+<line x1="75" y1="322.50" x2="865" y2="322.50" stroke="#ddd"/>
+<text x="65" y="326.50" text-anchor="end" font-family="sans-serif" font-size="10">0.25</text>
+<line x1="75" y1="235.00" x2="865" y2="235.00" stroke="#ddd"/>
+<text x="65" y="239.00" text-anchor="end" font-family="sans-serif" font-size="10">0.50</text>
+<line x1="75" y1="147.50" x2="865" y2="147.50" stroke="#ddd"/>
+<text x="65" y="151.50" text-anchor="end" font-family="sans-serif" font-size="10">0.75</text>
+<line x1="75" y1="60.00" x2="865" y2="60.00" stroke="#ddd"/>
+<text x="65" y="64.00" text-anchor="end" font-family="sans-serif" font-size="10">1.00</text>
+<line x1="71.00" y1="410.00" x2="71.00" y2="410.00" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="68.00" y1="410.00" x2="74.00" y2="410.00" stroke="#2c7fb8"/>
+<line x1="68.00" y1="410.00" x2="74.00" y2="410.00" stroke="#2c7fb8"/>
+<circle cx="71.00" cy="410.00" r="3.5" fill="#2c7fb8"><title>compliant, episode 1: 0.000 [0.000, 0.000]</title></circle>
+<line x1="158.78" y1="195.71" x2="158.78" y2="110.00" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="155.78" y1="195.71" x2="161.78" y2="195.71" stroke="#2c7fb8"/>
+<line x1="155.78" y1="110.00" x2="161.78" y2="110.00" stroke="#2c7fb8"/>
+<circle cx="158.78" cy="152.86" r="3.5" fill="#2c7fb8"><title>compliant, episode 2: 0.735 [0.612, 0.857]</title></circle>
+<line x1="246.56" y1="124.29" x2="246.56" y2="67.14" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="243.56" y1="124.29" x2="249.56" y2="124.29" stroke="#2c7fb8"/>
+<line x1="243.56" y1="67.14" x2="249.56" y2="67.14" stroke="#2c7fb8"/>
+<circle cx="246.56" cy="95.71" r="3.5" fill="#2c7fb8"><title>compliant, episode 3: 0.898 [0.816, 0.980]</title></circle>
+<line x1="334.33" y1="110.00" x2="334.33" y2="60.00" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="331.33" y1="110.00" x2="337.33" y2="110.00" stroke="#2c7fb8"/>
+<line x1="331.33" y1="60.00" x2="337.33" y2="60.00" stroke="#2c7fb8"/>
+<circle cx="334.33" cy="81.43" r="3.5" fill="#2c7fb8"><title>compliant, episode 4: 0.939 [0.857, 1.000]</title></circle>
+<line x1="422.11" y1="117.14" x2="422.11" y2="67.14" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="419.11" y1="117.14" x2="425.11" y2="117.14" stroke="#2c7fb8"/>
+<line x1="419.11" y1="67.14" x2="425.11" y2="67.14" stroke="#2c7fb8"/>
+<circle cx="422.11" cy="88.57" r="3.5" fill="#2c7fb8"><title>compliant, episode 5: 0.918 [0.837, 0.980]</title></circle>
+<line x1="509.89" y1="117.14" x2="509.89" y2="67.14" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="506.89" y1="117.14" x2="512.89" y2="117.14" stroke="#2c7fb8"/>
+<line x1="506.89" y1="67.14" x2="512.89" y2="67.14" stroke="#2c7fb8"/>
+<circle cx="509.89" cy="88.57" r="3.5" fill="#2c7fb8"><title>compliant, episode 6: 0.918 [0.837, 0.980]</title></circle>
+<line x1="597.67" y1="81.43" x2="597.67" y2="60.00" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="594.67" y1="81.43" x2="600.67" y2="81.43" stroke="#2c7fb8"/>
+<line x1="594.67" y1="60.00" x2="600.67" y2="60.00" stroke="#2c7fb8"/>
+<circle cx="597.67" cy="67.14" r="3.5" fill="#2c7fb8"><title>compliant, episode 7: 0.980 [0.939, 1.000]</title></circle>
+<line x1="685.44" y1="117.14" x2="685.44" y2="67.14" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="682.44" y1="117.14" x2="688.44" y2="117.14" stroke="#2c7fb8"/>
+<line x1="682.44" y1="67.14" x2="688.44" y2="67.14" stroke="#2c7fb8"/>
+<circle cx="685.44" cy="88.57" r="3.5" fill="#2c7fb8"><title>compliant, episode 8: 0.918 [0.837, 0.980]</title></circle>
+<line x1="773.22" y1="95.71" x2="773.22" y2="60.00" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="770.22" y1="95.71" x2="776.22" y2="95.71" stroke="#2c7fb8"/>
+<line x1="770.22" y1="60.00" x2="776.22" y2="60.00" stroke="#2c7fb8"/>
+<circle cx="773.22" cy="74.29" r="3.5" fill="#2c7fb8"><title>compliant, episode 9: 0.959 [0.898, 1.000]</title></circle>
+<line x1="861.00" y1="95.71" x2="861.00" y2="60.00" stroke="#2c7fb8" stroke-width="1.5"/>
+<line x1="858.00" y1="95.71" x2="864.00" y2="95.71" stroke="#2c7fb8"/>
+<line x1="858.00" y1="60.00" x2="864.00" y2="60.00" stroke="#2c7fb8"/>
+<circle cx="861.00" cy="74.29" r="3.5" fill="#2c7fb8"><title>compliant, episode 10: 0.959 [0.898, 1.000]</title></circle>
+<polyline points="71.00,410.00 158.78,152.86 246.56,95.71 334.33,81.43 422.11,88.57 509.89,88.57 597.67,67.14 685.44,88.57 773.22,74.29 861.00,74.29" fill="none" stroke="#2c7fb8" stroke-width="2"/>
+<line x1="79.00" y1="410.00" x2="79.00" y2="410.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="76.00" y1="410.00" x2="82.00" y2="410.00" stroke="#d95f0e"/>
+<line x1="76.00" y1="410.00" x2="82.00" y2="410.00" stroke="#d95f0e"/>
+<circle cx="79.00" cy="410.00" r="3.5" fill="#d95f0e"><title>violating, episode 1: 0.000 [0.000, 0.000]</title></circle>
+<line x1="166.78" y1="195.71" x2="166.78" y2="110.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="163.78" y1="195.71" x2="169.78" y2="195.71" stroke="#d95f0e"/>
+<line x1="163.78" y1="110.00" x2="169.78" y2="110.00" stroke="#d95f0e"/>
+<circle cx="166.78" cy="152.86" r="3.5" fill="#d95f0e"><title>violating, episode 2: 0.735 [0.612, 0.857]</title></circle>
+<line x1="254.56" y1="95.71" x2="254.56" y2="60.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="251.56" y1="95.71" x2="257.56" y2="95.71" stroke="#d95f0e"/>
+<line x1="251.56" y1="60.00" x2="257.56" y2="60.00" stroke="#d95f0e"/>
+<circle cx="254.56" cy="74.29" r="3.5" fill="#d95f0e"><title>violating, episode 3: 0.959 [0.898, 1.000]</title></circle>
+<line x1="342.33" y1="95.71" x2="342.33" y2="60.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="339.33" y1="95.71" x2="345.33" y2="95.71" stroke="#d95f0e"/>
+<line x1="339.33" y1="60.00" x2="345.33" y2="60.00" stroke="#d95f0e"/>
+<circle cx="342.33" cy="74.29" r="3.5" fill="#d95f0e"><title>violating, episode 4: 0.959 [0.898, 1.000]</title></circle>
+<line x1="430.11" y1="81.43" x2="430.11" y2="60.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="427.11" y1="81.43" x2="433.11" y2="81.43" stroke="#d95f0e"/>
+<line x1="427.11" y1="60.00" x2="433.11" y2="60.00" stroke="#d95f0e"/>
+<circle cx="430.11" cy="67.14" r="3.5" fill="#d95f0e"><title>violating, episode 5: 0.980 [0.939, 1.000]</title></circle>
+<line x1="517.89" y1="60.00" x2="517.89" y2="60.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="514.89" y1="60.00" x2="520.89" y2="60.00" stroke="#d95f0e"/>
+<line x1="514.89" y1="60.00" x2="520.89" y2="60.00" stroke="#d95f0e"/>
+<circle cx="517.89" cy="60.00" r="3.5" fill="#d95f0e"><title>violating, episode 6: 1.000 [1.000, 1.000]</title></circle>
+<line x1="605.67" y1="81.43" x2="605.67" y2="60.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="602.67" y1="81.43" x2="608.67" y2="81.43" stroke="#d95f0e"/>
+<line x1="602.67" y1="60.00" x2="608.67" y2="60.00" stroke="#d95f0e"/>
+<circle cx="605.67" cy="67.14" r="3.5" fill="#d95f0e"><title>violating, episode 7: 0.980 [0.939, 1.000]</title></circle>
+<line x1="693.44" y1="60.00" x2="693.44" y2="60.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="690.44" y1="60.00" x2="696.44" y2="60.00" stroke="#d95f0e"/>
+<line x1="690.44" y1="60.00" x2="696.44" y2="60.00" stroke="#d95f0e"/>
+<circle cx="693.44" cy="60.00" r="3.5" fill="#d95f0e"><title>violating, episode 8: 1.000 [1.000, 1.000]</title></circle>
+<line x1="781.22" y1="110.00" x2="781.22" y2="60.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="778.22" y1="110.00" x2="784.22" y2="110.00" stroke="#d95f0e"/>
+<line x1="778.22" y1="60.00" x2="784.22" y2="60.00" stroke="#d95f0e"/>
+<circle cx="781.22" cy="81.43" r="3.5" fill="#d95f0e"><title>violating, episode 9: 0.939 [0.857, 1.000]</title></circle>
+<line x1="869.00" y1="95.71" x2="869.00" y2="60.00" stroke="#d95f0e" stroke-width="1.5"/>
+<line x1="866.00" y1="95.71" x2="872.00" y2="95.71" stroke="#d95f0e"/>
+<line x1="866.00" y1="60.00" x2="872.00" y2="60.00" stroke="#d95f0e"/>
+<circle cx="869.00" cy="74.29" r="3.5" fill="#d95f0e"><title>violating, episode 10: 0.959 [0.898, 1.000]</title></circle>
+<polyline points="79.00,410.00 166.78,152.86 254.56,74.29 342.33,74.29 430.11,67.14 517.89,60.00 605.67,67.14 693.44,60.00 781.22,81.43 869.00,74.29" fill="none" stroke="#d95f0e" stroke-width="2"/>
+<text x="75.00" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">1</text>
+<text x="162.78" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">2</text>
+<text x="250.56" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">3</text>
+<text x="338.33" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">4</text>
+<text x="426.11" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">5</text>
+<text x="513.89" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">6</text>
+<text x="601.67" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">7</text>
+<text x="689.44" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">8</text>
+<text x="777.22" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">9</text>
+<text x="865.00" y="428" text-anchor="middle" font-family="sans-serif" font-size="10">10</text>
+<line x1="725" y1="68" x2="743" y2="68" stroke="#2c7fb8" stroke-width="2"/>
+<text x="749" y="72" font-family="sans-serif" font-size="11">compliant</text>
+<line x1="725" y1="86" x2="743" y2="86" stroke="#d95f0e" stroke-width="2"/>
+<text x="749" y="90" font-family="sans-serif" font-size="11">violating</text>
+</svg>

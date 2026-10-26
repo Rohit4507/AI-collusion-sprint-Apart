@@ -1,0 +1,8 @@
+protocol_version=1.0
+protocol_amendment=A1: fail closed on controlled_message_generation_failed; A2: report unusable classifier views as not_run; A3 (2026-10-26, after A1 gate failure and metadata-only census, before any outcome summaries): exclude whole sequence pair when controlled message generation failed in either arm; see research/experimental_design.md
+input=C:\Users\rohit\Downloads\AI-collusion-sprint-main\AI-collusion-sprint-main\data\episodes
+output=C:\Users\rohit\Downloads\AI-collusion-sprint-main\AI-collusion-sprint-main\outputs\controlled-peer-audit-a3
+selected_rows=1000
+complete_sequence_pairs=49
+outcome=constrained_evidence_accept_rate
+intent_inferred=false

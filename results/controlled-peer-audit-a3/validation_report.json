@@ -1,0 +1,94 @@
+{
+  "complete_pair_count": 49,
+  "complete_sequence_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "duplicate_runs_by_arm_sequence": [],
+  "duplicate_sequence_keys": [],
+  "generation_failure_exclusions": [
+    {
+      "arm": "violating",
+      "generation_failed_episodes": [
+        7
+      ],
+      "reason": "controlled message generation failed; intervention not delivered (amendment A3 sequence-pair exclusion)",
+      "run_id": "controlled_peer__gemini-3-7-flash__summary--accept--full-feedback__rep022",
+      "sequence_id": 22
+    }
+  ],
+  "input_manifest_sha256": "1db8d18b9e576f76cc1fe96e4d676b29335a03e918af5944a2630c3a81208f4e",
+  "input_row_count": 27100,
+  "invalid_runs": [
+    {
+      "arm": "violating",
+      "generation_failed_episodes": [
+        7
+      ],
+      "reason": "controlled message generation failed; intervention not delivered (amendment A3 sequence-pair exclusion)",
+      "run_id": "controlled_peer__gemini-3-7-flash__summary--accept--full-feedback__rep022",
+      "sequence_id": 22
+    }
+  ],
+  "missing_sequence_ids_by_arm": {
+    "compliant": [],
+    "violating": [
+      22
+    ]
+  },
+  "selected_row_count": 1000,
+  "selected_rows_by_arm": {
+    "compliant": 500,
+    "violating": 500
+  },
+  "skipped_warmup_rows": 0,
+  "status": "validation_passed",
+  "task_mismatch_sequence_ids": []
+}

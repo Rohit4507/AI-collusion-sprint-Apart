@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="500" y="32" text-anchor="middle" font-family="sans-serif" font-size="20">Paired sequence differences</text>
+<text x="500" y="54" text-anchor="middle" font-family="sans-serif" font-size="13">Constrained-evidence ACCEPT rate: violating peer minus compliant peer</text>
+<line x1="90" y1="379.04" x2="970" y2="379.04" stroke="#555" stroke-dasharray="6,5"/>
+<line x1="90" y1="70" x2="90" y2="440" stroke="#333"/>
+<line x1="90" y1="440" x2="970" y2="440" stroke="#333"/>
+<text x="25" y="260" transform="rotate(-90 25 260)" text-anchor="middle" font-family="sans-serif" font-size="13">Rate difference</text>
+<line x1="85" y1="440.00" x2="90" y2="440.00" stroke="#333"/>
+<text x="80" y="444.00" text-anchor="end" font-family="sans-serif" font-size="11">-0.17</text>
+<line x1="85" y1="347.50" x2="90" y2="347.50" stroke="#333"/>
+<text x="80" y="351.50" text-anchor="end" font-family="sans-serif" font-size="11">0.09</text>
+<line x1="85" y1="255.00" x2="90" y2="255.00" stroke="#333"/>
+<text x="80" y="259.00" text-anchor="end" font-family="sans-serif" font-size="11">0.35</text>
+<line x1="85" y1="162.50" x2="90" y2="162.50" stroke="#333"/>
+<text x="80" y="166.50" text-anchor="end" font-family="sans-serif" font-size="11">0.61</text>
+<line x1="85" y1="70.00" x2="90" y2="70.00" stroke="#333"/>
+<text x="80" y="74.00" text-anchor="end" font-family="sans-serif" font-size="11">0.87</text>
+<circle cx="98.98" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 1: 0.000</title></circle>
+<circle cx="116.94" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 2: 0.000</title></circle>
+<circle cx="134.90" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 3: 0.000</title></circle>
+<circle cx="152.86" cy="414.48" r="4" fill="#2c7fb8"><title>sequence 4: -0.100</title></circle>
+<circle cx="170.82" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 5: 0.000</title></circle>
+<circle cx="188.78" cy="414.48" r="4" fill="#2c7fb8"><title>sequence 6: -0.100</title></circle>
+<circle cx="206.73" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 7: 0.000</title></circle>
+<circle cx="224.69" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 8: 0.100</title></circle>
+<circle cx="242.65" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 9: 0.100</title></circle>
+<circle cx="260.61" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 10: 0.000</title></circle>
+<circle cx="278.57" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 11: 0.000</title></circle>
+<circle cx="296.53" cy="272.72" r="4" fill="#2c7fb8"><title>sequence 12: 0.300</title></circle>
+<circle cx="314.49" cy="95.52" r="4" fill="#2c7fb8"><title>sequence 13: 0.800</title></circle>
+<circle cx="332.45" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 14: 0.100</title></circle>
+<circle cx="350.41" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 15: 0.000</title></circle>
+<circle cx="368.37" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 16: 0.000</title></circle>
+<circle cx="386.33" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 17: 0.000</title></circle>
+<circle cx="404.29" cy="414.48" r="4" fill="#2c7fb8"><title>sequence 18: -0.100</title></circle>
+<circle cx="422.24" cy="414.48" r="4" fill="#2c7fb8"><title>sequence 19: -0.100</title></circle>
+<circle cx="440.20" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 20: 0.000</title></circle>
+<circle cx="458.16" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 21: 0.000</title></circle>
+<circle cx="476.12" cy="414.48" r="4" fill="#2c7fb8"><title>sequence 23: -0.100</title></circle>
+<circle cx="494.08" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 24: 0.000</title></circle>
+<circle cx="512.04" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 25: 0.100</title></circle>
+<circle cx="530.00" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 26: 0.100</title></circle>
+<circle cx="547.96" cy="414.48" r="4" fill="#2c7fb8"><title>sequence 27: -0.100</title></circle>
+<circle cx="565.92" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 28: 0.100</title></circle>
+<circle cx="583.88" cy="414.48" r="4" fill="#2c7fb8"><title>sequence 29: -0.100</title></circle>
+<circle cx="601.84" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 30: 0.000</title></circle>
+<circle cx="619.80" cy="414.48" r="4" fill="#2c7fb8"><title>sequence 31: -0.100</title></circle>
+<circle cx="637.76" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 32: 0.000</title></circle>
+<circle cx="655.71" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 33: 0.000</title></circle>
+<circle cx="673.67" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 34: 0.000</title></circle>
+<circle cx="691.63" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 35: 0.000</title></circle>
+<circle cx="709.59" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 36: 0.000</title></circle>
+<circle cx="727.55" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 37: 0.000</title></circle>
+<circle cx="745.51" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 38: 0.100</title></circle>
+<circle cx="763.47" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 39: 0.000</title></circle>
+<circle cx="781.43" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 40: 0.100</title></circle>
+<circle cx="799.39" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 41: 0.100</title></circle>
+<circle cx="817.35" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 42: 0.000</title></circle>
+<circle cx="835.31" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 43: 0.000</title></circle>
+<circle cx="853.27" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 44: 0.100</title></circle>
+<circle cx="871.22" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 45: 0.000</title></circle>
+<circle cx="889.18" cy="343.60" r="4" fill="#2c7fb8"><title>sequence 46: 0.100</title></circle>
+<circle cx="907.14" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 47: 0.000</title></circle>
+<circle cx="925.10" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 48: 0.000</title></circle>
+<circle cx="943.06" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 49: 0.000</title></circle>
+<circle cx="961.02" cy="379.04" r="4" fill="#2c7fb8"><title>sequence 50: 0.000</title></circle>
+<text x="530.00" y="495" text-anchor="middle" font-family="sans-serif" font-size="13">Matched sequence block (sequence ID order)</text>
+</svg>
