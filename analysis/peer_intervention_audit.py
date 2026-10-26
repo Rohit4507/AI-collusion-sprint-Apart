@@ -220,6 +220,21 @@ def _task_signature(
     return tuple(signature)
 
 
+_GENERATION_FAILURE_HANDLINGS = ("fail_closed", "exclude_sequence_pair")
+
+
+def _generation_failure_handling(config: Mapping[str, Any]) -> str:
+    handling = str(
+        config.get("design", {}).get("generation_failure_handling", "fail_closed")
+    )
+    if handling not in _GENERATION_FAILURE_HANDLINGS:
+        raise AuditError(
+            "design.generation_failure_handling must be one of "
+            f"{_GENERATION_FAILURE_HANDLINGS}, got {handling!r}"
+        )
+    return handling
+
+
 def _validate_config(config: Mapping[str, Any]) -> None:
     required = (
         "protocol_version",
@@ -261,6 +276,7 @@ def _validate_config(config: Mapping[str, Any]) -> None:
         design["expected_sequence_ids"]
     ):
         raise AuditError("expected_sequence_ids contains duplicates")
+    _generation_failure_handling(config)
 
 
 def _validate_metadata(
@@ -283,6 +299,16 @@ def _validate_metadata(
             raise AuditError(
                 f"Selected episode{location} is missing required condition field {field!r}"
             )
+        if (
+            field == "controlled_message_generation_failed"
+            and _generation_failure_handling(config) == "exclude_sequence_pair"
+        ):
+            # Amendment A3: presence and boolean type are still required, but
+            # a True value no longer aborts here. build_paired_runs records
+            # the run as invalid (intervention not delivered) and excludes
+            # its whole sequence pair. Every other field still fails closed.
+            _as_bool(row[field], field)
+            continue
         if isinstance(expected, bool):
             actual = _as_bool(row[field], field)
         elif field.endswith("_verdict"):
@@ -324,6 +350,9 @@ def build_paired_runs(
 
     Missing/incomplete/duplicate run blocks are recorded and excluded; unexpected
     metadata or schema violations fail closed rather than silently changing arms.
+    Under amendment A3 (separate amended config only), a run whose controlled
+    message generation failed is likewise recorded and excluded with its whole
+    sequence pair; the default remains the A1 fail-closed stop.
     """
     _validate_config(config)
     conditions = config["condition_ids"]
@@ -337,6 +366,7 @@ def build_paired_runs(
         "selected_rows_by_arm": {"compliant": 0, "violating": 0},
         "skipped_warmup_rows": 0,
         "invalid_runs": [],
+        "generation_failure_exclusions": [],
         "duplicate_runs_by_arm_sequence": [],
         "task_mismatch_sequence_ids": [],
         "missing_sequence_ids_by_arm": {"compliant": [], "violating": []},
@@ -399,6 +429,29 @@ def build_paired_runs(
             )
             continue
         sequence_id = next(iter(sequences))
+        if _generation_failure_handling(config) == "exclude_sequence_pair":
+            failed_episodes = sorted(
+                _as_int(row.get("evaluation_episode"), "evaluation_episode")
+                for row in episode_rows
+                if _as_bool(
+                    row.get("controlled_message_generation_failed"),
+                    "controlled_message_generation_failed",
+                )
+            )
+            if failed_episodes:
+                record = {
+                    "arm": arm,
+                    "run_id": run_id,
+                    "sequence_id": sequence_id,
+                    "reason": (
+                        "controlled message generation failed; intervention "
+                        "not delivered (amendment A3 sequence-pair exclusion)"
+                    ),
+                    "generation_failed_episodes": failed_episodes,
+                }
+                diagnostics["invalid_runs"].append(record)
+                diagnostics["generation_failure_exclusions"].append(record)
+                continue
         warmup_flags = [
             _as_bool(row.get("is_warmup"), "is_warmup") for row in episode_rows
         ]
@@ -1342,6 +1395,15 @@ def run_audit(
         ],
         "input_manifest_sha256": validation["input_manifest_sha256"],
     }
+    if validation.get("generation_failure_exclusions"):
+        excluded = validation["generation_failure_exclusions"]
+        summary["interpretation_limits"].append(
+            "Amendment A3: "
+            f"{len(excluded)} run(s) excluded with their whole sequence pairs "
+            "because controlled message generation failed (intervention not "
+            "delivered); see validation.generation_failure_exclusions. "
+            "Estimates are complete-pair (delivered-intervention) estimates."
+        )
     _write_csv(
         output / "run_level.csv",
         _run_level_rows(pairs),
