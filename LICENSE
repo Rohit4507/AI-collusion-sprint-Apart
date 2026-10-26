@@ -19,37 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Scope of this license
-=====================
-
-This MIT license covers the SOFTWARE in this repository: the analysis code,
-tests, scripts, configuration files, and build/CI metadata. Specifically:
-
-  analysis/  configs/  scripts/  tests/  pyproject.toml  REUSE.toml
-  requirements-analysis.txt  requirements-analysis.lock
-  requirements-dev.txt  requirements-report.txt
-  .github/workflows/
-
-Documentation and research outputs -- the report, research records, figures,
-and checked-in result artifacts -- are licensed separately under the Creative
-Commons Attribution 4.0 International License (CC-BY-4.0). See
-LICENSES/CC-BY-4.0.txt and REUSE.toml for the exact path mapping.
-
-Third-party material retains its own notices and terms and is NOT covered by
-the copyright grant above:
-
-  * experiments/controlled.py and experiments/UPSTREAM_LICENSE are a vendored
-    snapshot of SALT-NLP/agent-collusion, copyright (c) 2026 Xinrui Shi,
-    Yanzhe Zhang, and Diyi Yang, under the MIT License. The full upstream
-    notice is preserved in experiments/UPSTREAM_LICENSE.
-
-  * The SALT-NLP/agent-collusion dataset is NOT redistributed by this
-    repository. It is obtained separately by the user and remains subject to
-    its own upstream license and terms. Nothing here grants rights to it.
-
-No license is granted to any trademark, and no warranty of any kind is made.
-Results in this repository must not be used as evidence of culpability for any
-agent or deployer; see the report's Limitations and Dual-Use appendix.

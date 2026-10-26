@@ -48,6 +48,7 @@ SPDX-License-Identifier = "MIT"
 [[annotations]]
 path = [
     "README.md",
+    "LICENSING.md",
     "analysis/README.md",
     "figures/**",
     "report/**",
