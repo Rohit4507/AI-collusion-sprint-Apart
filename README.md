@@ -4,7 +4,7 @@
 
 Behavioural audits can confuse four different claims: actions are *statistically dependent*, a monitor can *identify the interaction regime*, one agent *changed another's behaviour*, and agents *intended* harmful coordination. This repository tests where those inferences break, in two complementary settings. It does **not** present a validated LLM collusion or intent detector.
 
-> **Report:** [integrated report draft](report/final-report.md) · [PDF preview](report/final-report-draft.pdf) (author-revision draft; the submitted PDF is exported from the official sprint template)
+> **Report:** [Study 1 report draft](report/study.md) · [PDF preview](report/study-draft.pdf) (author-revision draft; the submitted PDF is exported from the official sprint template). This draft covers the scripted stress test only — Study 2 (controlled-peer audit) results are summarised below and in [`results/controlled-peer-audit-a3/`](results/controlled-peer-audit-a3/).
 
 ## TL;DR
 
@@ -108,7 +108,7 @@ python -m unittest discover -s tests -v   # 42 synthetic-fixture tests
 | [`experiments/controlled.py`](experiments/controlled.py) | Vendored upstream SALT snapshot + fenced-JSON parsing fix ([provenance](experiments/README.md)) |
 | [`results/`](results/) | Checked-in Study 1 outputs and metrics |
 | [`figures/`](figures/) | Study 1 per-condition error figure |
-| [`report/`](report/) | Integrated report draft, scripted-only generated draft (`study.md`), submission checklist |
+| [`report/`](report/) | Scripted Study 1 report draft (`study.md`, generated `study-draft.pdf`), submission checklist |
 | [`research/`](research/) | Protocols, amendments, data-gate and validation records, related-work audits |
 | [`tests/`](tests/) | Synthetic-fixture unit/integration tests (no dataset outcomes) |
 | [`scripts/`](scripts/) | Reproduction and report-generation scripts |
