@@ -168,6 +168,45 @@ class PeerInterventionAuditTests(unittest.TestCase):
         with self.assertRaises(AuditError):
             build_paired_runs(rows, self.config)
 
+    def test_generation_failure_excludes_whole_pair_under_a3(self) -> None:
+        config = copy.deepcopy(self.config)
+        config["design"]["generation_failure_handling"] = "exclude_sequence_pair"
+        rows = make_fixture_rows()
+        treatment = config["condition_ids"]["violating"]
+        for row in rows:
+            if (
+                row["condition_id"] == treatment
+                and row["sequence_id"] == 3
+                and row["evaluation_episode"] == 4
+            ):
+                row["controlled_message_generation_failed"] = True
+                break
+        pairs, diagnostics = build_paired_runs(rows, config)
+        self.assertEqual(len(pairs), 49)
+        self.assertNotIn(3, diagnostics["complete_sequence_ids"])
+        self.assertEqual(len(diagnostics["generation_failure_exclusions"]), 1)
+        exclusion = diagnostics["generation_failure_exclusions"][0]
+        self.assertEqual(exclusion["sequence_id"], 3)
+        self.assertEqual(exclusion["arm"], "violating")
+        self.assertEqual(exclusion["generation_failed_episodes"], [4])
+        self.assertTrue(
+            any(item["sequence_id"] == 3 for item in diagnostics["invalid_runs"])
+        )
+
+    def test_a3_still_fails_closed_on_other_metadata(self) -> None:
+        config = copy.deepcopy(self.config)
+        config["design"]["generation_failure_handling"] = "exclude_sequence_pair"
+        rows = make_fixture_rows()
+        rows[0]["alice_model"] = "unexpected/model"
+        with self.assertRaises(AuditError):
+            build_paired_runs(rows, config)
+
+    def test_unknown_generation_failure_handling_is_rejected(self) -> None:
+        config = copy.deepcopy(self.config)
+        config["design"]["generation_failure_handling"] = "drop_silently"
+        with self.assertRaises(AuditError):
+            build_paired_runs(make_fixture_rows(), config)
+
     def test_jsonl_loader_accepts_dataset_server_wrappers(self) -> None:
         row = make_fixture_rows()[0]
         with tempfile.TemporaryDirectory() as temp_dir:
