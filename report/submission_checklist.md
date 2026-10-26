@@ -5,7 +5,7 @@
 | Official criterion | Available evidence | Remaining weakness |
 |---|---|---|
 | Impact Potential & Innovation | Mechanism-matched common-cause/channel artifact; explicit calibration/observability failures | Incremental methodology, no exhaustive novelty claim, no real-LLM external validity |
-| Execution Quality | Frozen protocol, all seeds, seven baselines/views, paired primary interval, negative result retained, exploratory extension separated, 39 passing tests and fresh-environment reproduction | No benchmark-native replication, unknown-family test or comprehensive metric uncertainty |
+| Execution Quality | Frozen protocol, all seeds, seven baselines/views, paired primary interval, negative result retained, exploratory extension separated, 42 passing tests and fresh-environment reproduction | No benchmark-native replication, unknown-family test or comprehensive metric uncertainty |
 | Presentation & Clarity | Source-linked report, exact denominators/confusion counts, per-condition plot, README/reproduction commands | Human editing and final official-template layout still required |
 
 ## Before submitting
