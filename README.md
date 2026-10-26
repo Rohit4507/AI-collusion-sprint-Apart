@@ -2,6 +2,20 @@
 
 **Scripted stress tests and a controlled-peer audit of LLM traces** — an Apart AI Collusion Research Sprint project (Track 2: Detection and Audit of Collusion).
 
+[![License: code MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+[![License: docs CC-BY-4.0](https://img.shields.io/badge/docs-CC--BY--4.0-green.svg)](LICENSES/CC-BY-4.0.txt)
+[![REUSE compliant](https://img.shields.io/badge/REUSE-compliant-brightgreen.svg)](REUSE.toml)
+[![Tests](https://img.shields.io/badge/tests-42%20passing-success.svg)](#reproduce)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-informational.svg)](pyproject.toml)
+
+## In 30 seconds
+
+A detector that measures whether two AI agents "act in sync" reported a **67-percentage-point coordination gap** in this data. The agents' actual behaviour differed by **2.86 points**, and that difference was not statistically significant.
+
+The gap is pure arithmetic. The peer's verdict never varies within an arm, so its "sync score" is just the focal agent's own accept rate relabelled — exactly equal to it in one arm, exactly equal to its complement in the other, in all 49 matched pairs. A classifier could also identify the assigned peer policy from the focal agent's *messages* at **AUC 1.000**, while her *actions* gave it **0.601**.
+
+So two of the signals most often cited as evidence of AI collusion appeared at full strength in data containing **no measured intent, no significant behaviour change, and a harm proxy that moved the wrong way**. This repository builds such cases on purpose — in scripted simulation and in real LLM traces — and measures where the standard evidence breaks.
+
 Behavioural audits can confuse four different claims: actions are *statistically dependent*, a monitor can *identify the interaction regime*, one agent *changed another's behaviour*, and agents *intended* harmful coordination. This repository tests where those inferences break, in two complementary settings. It does **not** present a validated LLM collusion or intent detector.
 
 > **Report:** [Study 1 report draft](report/study.md) · [PDF preview](report/study-draft.pdf) (author-revision draft; the submitted PDF is exported from the official sprint template). This draft covers the scripted stress test only — Study 2 (controlled-peer audit) results are summarised below and in [`results/controlled-peer-audit-a3/`](results/controlled-peer-audit-a3/).
@@ -112,6 +126,10 @@ python -m unittest discover -s tests -v   # 42 synthetic-fixture tests
 | [`research/`](research/) | Protocols, amendments, data-gate and validation records, related-work audits |
 | [`tests/`](tests/) | Synthetic-fixture unit/integration tests (no dataset outcomes) |
 | [`scripts/`](scripts/) | Reproduction and report-generation scripts |
+| [`LICENSE`](LICENSE) | MIT for the software, with an explicit scope note separating code, docs, and third-party material |
+| [`LICENSES/`](LICENSES/) | Full license texts: `MIT.txt`, `CC-BY-4.0.txt` |
+| [`REUSE.toml`](REUSE.toml) | Machine-readable path→license mapping (REUSE v3.3); verify with `reuse lint` |
+| [`pyproject.toml`](pyproject.toml) | Packaging metadata; ruff settings pinned to the defaults CI already enforces |
 
 Key research records: [scripted protocol](research/scripted_design.md) · [extension plan](research/extension_plan.md) · [SALT experimental design + amendments A1–A3](research/experimental_design.md) · [data-gate record](research/phase5_data_gate.md) · [validation log](research/validation_log.md) · [official requirements audit](research/official_requirements.md)
 
@@ -120,6 +138,6 @@ Key research records: [scripted protocol](research/scripted_design.md) · [exten
 - **Pre-existing work (disclosed):** the SALT offline audit pipeline, its frozen protocol/config/tests, and related research records predate the scripted stress test (see [`research/implementation_record.md`](research/implementation_record.md)). Amendment A3 and the completed real-data run are dated 26 October 2026. The scripted stress test was designed, implemented, and run on 25 October 2026.
 - **Vendored code:** `experiments/controlled.py` is an upstream SALT-NLP snapshot (MIT; see [`experiments/UPSTREAM_LICENSE`](experiments/UPSTREAM_LICENSE)) with one documented fenced-JSON parsing fix. It is not imported by the offline audit.
 - **AI assistance:** AI assistants were used for debugging, analysis, and report drafting. The human author directed the work, executed the local data gates and amended audit, and is responsible for verifying all claims in the submitted report. AI use is also disclosed in the report's LLM Usage Statement.
-- **Licensing:** no blanket license has been assigned to the original work in this repository — do not assume reuse rights. Upstream licensed code/datasets retain their own notices and terms.
+- **Licensing:** dual-licensed and [REUSE v3.3 compliant](REUSE.toml) (61/61 files carry copyright and license information). **Code** — `analysis/`, `configs/`, `scripts/`, `tests/`, CI and packaging metadata — is **MIT**; see [`LICENSE`](LICENSE). **Documentation and research outputs** — the report, `research/` records, figures, and checked-in result artifacts — are **CC-BY-4.0**; see [`LICENSES/CC-BY-4.0.txt`](LICENSES/CC-BY-4.0.txt). Upstream licensed code and datasets retain their own notices and terms: `experiments/controlled.py` is © 2026 Xinrui Shi, Yanzhe Zhang, and Diyi Yang under MIT (both copyrights are listed in `REUSE.toml` because the file is a derivative work), and the SALT-NLP dataset is **not** redistributed here — obtain it separately under its own terms.
 
 Scores in this repository must not be used as evidence of culpability for any agent or deployer; false accusation of benign coordination is a central risk this project documents. See the report's Limitations and Dual-Use appendix.

@@ -1,0 +1,79 @@
+# REUSE-SPDX-FileCopyrightText = "2026 Rohit Singh Rajput"
+# REUSE-SPDX-License-Identifier = "MIT"
+#
+# Machine-readable license mapping for this repository (REUSE Specification
+# v3.3, https://reuse.spec). This file exists because most files here are
+# generated artifacts, data, figures and prose that cannot carry an inline
+# SPDX header.
+#
+#   Code                    -> MIT        (LICENSE, LICENSES/MIT.txt)
+#   Report, research, data,
+#   figures, documentation  -> CC-BY-4.0  (LICENSES/CC-BY-4.0.txt)
+#   Vendored upstream code  -> MIT, upstream copyright retained
+#
+# Verify with:  pipx run reuse lint
+#
+# The SALT-NLP/agent-collusion dataset is NOT redistributed here and is not
+# covered by any grant in this file; obtain it separately under its own terms.
+
+version = 1
+
+# --- Software: MIT -----------------------------------------------------------
+
+[[annotations]]
+path = [
+    "analysis/*.py",
+    "configs/**",
+    "scripts/**",
+    "tests/**",
+    ".github/**",
+    "pyproject.toml",
+    "REUSE.toml",
+    "requirements-analysis.txt",
+    "requirements-analysis.lock",
+    "requirements-dev.txt",
+    "requirements-report.txt",
+    "LICENSE",
+    "LICENSES/MIT.txt",
+    ".gitignore",
+]
+SPDX-FileCopyrightText = "2026 Rohit Singh Rajput"
+SPDX-License-Identifier = "MIT"
+
+# --- Documentation, report, research records, figures and data: CC-BY-4.0 ----
+#
+# Includes checked-in result artifacts (CSV/JSON/SVG/log). These are research
+# outputs, not software, so they are licensed as documentation.
+
+[[annotations]]
+path = [
+    "README.md",
+    "analysis/README.md",
+    "figures/**",
+    "report/**",
+    "research/**",
+    "results/**",
+    "LICENSES/CC-BY-4.0.txt",
+]
+SPDX-FileCopyrightText = "2026 Rohit Singh Rajput"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# --- Vendored upstream snapshot: MIT, original copyright retained ------------
+#
+# experiments/controlled.py is a verbatim snapshot of SALT-NLP/agent-collusion
+# at upstream blob b7863603560a736403cf1337aa5909de6e377458, plus one local
+# change (_unwrap_json_code_fence and its single call site in save_bob).
+# Both copyrights are listed because the file is a derivative work.
+# See experiments/README.md and experiments/UPSTREAM_LICENSE.
+
+[[annotations]]
+path = [
+    "experiments/controlled.py",
+    "experiments/UPSTREAM_LICENSE",
+    "experiments/README.md",
+]
+SPDX-FileCopyrightText = [
+    "2026 Xinrui Shi, Yanzhe Zhang, and Diyi Yang",
+    "2026 Rohit Singh Rajput (local fenced-JSON parsing fix only)",
+]
+SPDX-License-Identifier = "MIT"

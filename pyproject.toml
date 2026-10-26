@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "collusion-evidence-audit"
+version = "1.0.0"
+description = "Scripted stress tests and a controlled-peer audit testing what counts as evidence of coordination between AI agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+license-files = ["LICENSE", "LICENSES/CC-BY-4.0.txt", "experiments/UPSTREAM_LICENSE"]
+authors = [{ name = "Rohit Singh Rajput" }]
+keywords = [
+    "ai-safety",
+    "collusion",
+    "detection",
+    "audit",
+    "mutual-information",
+    "reproducibility",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Runtime dependencies mirror requirements-analysis.lock exactly. The studies
+# are CPU-only and make no network, model-API, or paid-resource calls.
+dependencies = [
+    "numpy==2.4.6",
+    "pyarrow==21.0.0",
+    "scikit-learn==1.7.2",
+    "scipy==1.17.1",
+]
+
+[project.optional-dependencies]
+dev = ["ruff==0.17.2"]
+
+[project.urls]
+Homepage = "https://github.com/Rohit4507/AI-collusion-sprint-Apart"
+Repository = "https://github.com/Rohit4507/AI-collusion-sprint-Apart"
+Issues = "https://github.com/Rohit4507/AI-collusion-sprint-Apart/issues"
+
+[tool.setuptools]
+# Only `analysis` is an importable package. `experiments/controlled.py` is a
+# vendored upstream snapshot whose own `experiments.*` imports are deliberately
+# not vendored, so it must not be packaged or imported directly.
+packages = ["analysis"]
+
+[tool.ruff]
+# Pinned to ruff's own defaults so that adding this file does not change what
+# CI enforces. `line-length = 88` is the default; it is stated explicitly so a
+# future ruff default change cannot silently reformat the tree.
+line-length = 88
+target-version = "py311"
+extend-exclude = ["experiments"]
+
+[tool.ruff.lint]
+# ruff's default rule selection, stated explicitly for the same reason.
+select = ["E4", "E7", "E9", "F"]
