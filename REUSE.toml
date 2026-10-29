@@ -50,6 +50,7 @@ path = [
     "README.md",
     "LICENSING.md",
     "analysis/README.md",
+    "docs/**",
     "figures/**",
     "report/**",
     "research/**",
